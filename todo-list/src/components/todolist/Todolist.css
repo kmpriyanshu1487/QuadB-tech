@@ -1,0 +1,128 @@
+.todo-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.todo-list-items {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.todo-list-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 0.5px solid #dddcdc;
+}
+
+.todo-list-item.empty-message {
+    justify-content: center;
+    color: #666;
+    font-style: italic;
+}
+
+.todo-list-item span {
+    cursor: pointer;
+}
+
+.todo-list-item:last-child {
+    border-bottom: none;
+}
+
+.todo-items-actions span {
+    margin: 0 8px;
+    padding: 6px;
+}
+
+.todo-task-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 0; /* Allows text truncation */
+}
+
+.task-title-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.task-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.check-icon {
+    min-width: 20px;
+}
+
+.edit-icon {
+    color: #DAA520;
+    font-size: 18px;
+}
+
+.delete-icon {
+    color: #DC143C;
+    font-size: 18px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .todo-list-item {
+        padding: 10px 0;
+    }
+    
+    .todo-task-title {
+        font-size: 15px;
+        gap: 8px;
+    }
+    
+    .task-text {
+        max-width: 200px;
+    }
+    
+    .todo-items-actions span {
+        margin: 0 6px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-list-container {
+        padding: 0 10px;
+    }
+    
+    .todo-list-item {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+    
+    .task-text {
+        max-width: 150px;
+    }
+    
+    .edit-icon, .delete-icon {
+        font-size: 16px;
+    }
+    
+    .todo-items-actions span {
+        margin: 0 4px;
+        padding: 4px;
+    }
+}

@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #444950;
+   font-family: "Nunito", sans-serif;
+  
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}

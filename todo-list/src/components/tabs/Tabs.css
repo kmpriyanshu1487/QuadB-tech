@@ -1,0 +1,85 @@
+.tab-container {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.tab-lists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.tab-lists li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 60px;
+    height: 28px;
+    line-height: 28px;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-lists li:hover {
+    color: #93b1db;
+    border-color: #93b1db;
+}
+
+.tab-lists li.active {
+    color: #93b1db;
+    background: #fff;
+    border-color: #93b1db;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .tab-lists {
+        gap: 3px;
+    }
+
+    .tab-lists li {
+        min-width: 50px;
+        padding: 8px 3px;
+        font-size: 13px;
+        height: 24px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .tab-container {
+        padding: 9px 5px;
+    }
+
+    .tab-lists li {
+        min-width: 40px;
+        padding: 6px 2px;
+        font-size: 12px;
+        height: 22px;
+        line-height: 22px;
+    }
+}
